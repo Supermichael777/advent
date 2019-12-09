@@ -76,7 +76,7 @@ public static void main(String[] args){
 				value1 = setMode(paramMode, 1);
 				value2 = setMode(paramMode, 2);
 				
-				if((value1 == 0)){
+				if(!(value1 == 0)){
 					currentIndex = new Long(value2).intValue();
 					indexIterate = 0;
 					break;
@@ -166,7 +166,7 @@ public static void main(String[] args){
 		}
 	}
 	void setInput(long currentInput){
-		int target = new Long(setMode(("000"+Program.get(currentIndex)), 1)).intValue();
+		int target = new Long(setTarget(("000"+Program.get(currentIndex)), 1)).intValue();
 		Program.set(target, currentInput); //make sure to take proper inputs from the needed input source
 		currentIndex+=2;
 		try {
